@@ -3,11 +3,20 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { navLinks } from '@/app/data/home-content'
 
 export default function Header() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const isActive = (href: string) => {
+    if (href === '#' || href === '') return false
+    const path = href.split('#')[0]
+    if (path === '/') return pathname === '/'
+    return pathname === path
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -39,13 +48,23 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors font-medium text-sm"
+                className={`font-medium text-sm transition-colors relative ${
+                  isActive(link.href)
+                    ? 'text-[#57b5e0]'
+                    : 'text-white/80 hover:text-white'
+                }`}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <span
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
+                    style={{ backgroundColor: '#57b5e0' }}
+                  />
+                )}
               </Link>
             ))}
             <Link
-              href="#"
+              href="/academia"
               className="px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:brightness-110"
               style={{ backgroundColor: '#57b5e0', color: '#141f78' }}
             >
@@ -55,7 +74,7 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="#contacto"
+              href="/#contacto"
               className="hidden md:inline-flex items-center px-5 py-2.5 rounded-full bg-[#57b5e0] text-white font-semibold text-sm hover:bg-[#4aa8d3] transition-all"
             >
               Pedí tu reunión
@@ -88,13 +107,17 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-white/80 hover:text-white font-medium py-1 transition-colors"
+                className={`font-medium py-1 transition-colors ${
+                  isActive(link.href)
+                    ? 'text-[#57b5e0]'
+                    : 'text-white/80 hover:text-white'
+                }`}
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="#"
+              href="/academia"
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full font-semibold text-sm"
               style={{ backgroundColor: '#57b5e0', color: '#141f78' }}
@@ -102,7 +125,7 @@ export default function Header() {
               Academia Neurona
             </Link>
             <Link
-              href="#contacto"
+              href="/#contacto"
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white text-[#141f78] font-semibold text-sm"
             >

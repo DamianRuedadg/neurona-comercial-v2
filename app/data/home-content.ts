@@ -1,8 +1,8 @@
 export const navLinks = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Sobre Nosotros', href: '#nosotros' },
-  { label: 'Productos', href: '#productos' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Sobre Nosotros', href: '/nosotros' },
+  { label: 'Servicios', href: '/servicios' },
+  { label: 'Contacto', href: '/contacto' },
 ]
 
 export const heroSlides = [
@@ -288,10 +288,10 @@ export const contactContent = {
 export const footerContent = {
   copyright: '© 2026 Neurona Comercial. Todos los derechos reservados.',
   navLinks: [
-    { label: 'Inicio', href: '#inicio' },
-    { label: 'Sobre Nosotros', href: '#nosotros' },
-    { label: 'Productos', href: '#productos' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Inicio', href: '/' },
+    { label: 'Sobre Nosotros', href: '/nosotros' },
+    { label: 'Servicios', href: '/servicios' },
+    { label: 'Contacto', href: '/contacto' },
   ],
   phone: '+54 9 387 422-4437',
   email: 'info@neuronacomercial.com',
