@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import CustomCursor from '@/app/components/CustomCursor'
 import LoadingScreen from '@/app/components/LoadingScreen'
+import WhatsAppButton from '@/app/components/WhatsAppButton'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="antialiased font-sans">
         <LoadingScreen />
         <CustomCursor />
+        <WhatsAppButton />
         {children}
       </body>
     </html>

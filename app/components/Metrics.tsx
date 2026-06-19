@@ -181,6 +181,11 @@ export default function Metrics() {
           </motion.div>
 
         </div>
+
+        <p className="text-center text-xs text-gray-400 mt-8 max-w-2xl mx-auto leading-relaxed">
+          *Cifras acumuladas desde el inicio de operaciones. Próximamente publicaremos la metodología y fuente detallada de cada métrica.
+        </p>
+
       </div>
     </section>
   )

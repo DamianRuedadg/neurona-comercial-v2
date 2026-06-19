@@ -32,7 +32,7 @@ export default function Hero() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Animated background photo */}
+      {/* Animated background photo with Ken Burns zoom */}
       <AnimatePresence mode="sync">
         <motion.div
           key={current + '-bg'}
@@ -42,10 +42,13 @@ export default function Hero() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: 1, scale: 1.08 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.9, ease: 'easeInOut' }}
+          transition={{
+            opacity: { duration: 0.9, ease: 'easeInOut' },
+            scale: { duration: 5, ease: 'linear' },
+          }}
         />
       </AnimatePresence>
 

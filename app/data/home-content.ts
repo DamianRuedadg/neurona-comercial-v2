@@ -12,7 +12,7 @@ export const heroSlides = [
     subtitle:
       'Consultoría integral en procesos, TI, legales y growth marketing para que tu empresa eduque, crezca y convierta.',
     cta: 'Pedí tu reunión',
-    image: '/Images/Heroslider-1.png',
+    image: '/Imagenes/Heroslider-1.png',
   },
   {
     label: 'Estrategia',
@@ -20,7 +20,7 @@ export const heroSlides = [
     subtitle:
       'Diseñamos hojas de ruta claras para que cada decisión empresarial genere impacto real, medible y sostenido en el tiempo.',
     cta: 'Conocé nuestra metodología',
-    image: '/Images/Heroslider-2.png',
+    image: '/Imagenes/Heroslider-2.png',
   },
   {
     label: 'Tecnología',
@@ -28,7 +28,7 @@ export const heroSlides = [
     subtitle:
       'Plataformas, ecosistemas digitales y soluciones EdTech que escalan con tu empresa y conectan a tu equipo con el futuro.',
     cta: 'Explorá nuestras soluciones',
-    image: '/Images/Heroslider-3.png',
+    image: '/Imagenes/Heroslider-3.png',
   },
   {
     label: 'Ejecución',
@@ -36,7 +36,7 @@ export const heroSlides = [
     subtitle:
       'Acompañamos cada etapa con ejecución real: desde el diagnóstico hasta la implementación y el seguimiento de métricas.',
     cta: 'Ver casos de éxito',
-    image: '/Images/Heroslider-4.png',
+    image: '/Imagenes/Heroslider-4.png',
   },
   {
     label: 'Crecimiento',
@@ -44,38 +44,79 @@ export const heroSlides = [
     subtitle:
       'Combinamos visión comercial, respaldo legal e infraestructura tecnológica para que crezcas local e internacionalmente.',
     cta: 'Empezá hoy',
-    image: '/Images/Heroslider-5.png',
+    image: '/Imagenes/Heroslider-5.png',
   },
 ]
 
-export const valuePropositionContent = {
-  intro:
-    'No resolvemos síntomas, solucionamos problemas de raíz con un enfoque integral que combina estrategia, tecnología y ejecución.',
-  cta: 'Quiero saber más',
-  cards: [
-    {
-      title: 'DIAGNÓSTICO Y ARQUITECTURA EMPRESARIAL',
-      subtitle: 'La estructura detrás del escenario',
-      description:
-        'Analizamos a fondo tu empresa para identificar cuellos de botella, rediseñar procesos y construir una arquitectura organizacional sólida que soporte tu crecimiento sostenido.',
-      icon: '🏗️',
-    },
-    {
-      title: 'ECOSYSTEMS & EDTECH',
-      subtitle: 'Tecnología educativa aplicada al negocio',
-      description:
-        'Desarrollamos ecosistemas digitales y plataformas educativas que potencian la capacitación interna, la transferencia de conocimiento y la escalabilidad de tu equipo.',
-      icon: '🌐',
-    },
-    {
-      title: 'PUESTA EN ESCENA DIGITAL & PERFORMANCE',
-      subtitle: 'Mensajes que impactan, embudos que convierten',
-      description:
-        'Diseñamos y ejecutamos estrategias de marketing digital, contenido y publicidad performance para posicionar tu marca y convertir audiencias en clientes reales.',
-      icon: '📈',
-    },
+export const videoTestimonialsContent = {
+  title: 'Testimonios en Video',
+  subtitle: 'Lo que dicen nuestros clientes en sus propias palabras.',
+  clients: [
+    { name: 'Cliente 1' },
+    { name: 'Cliente 2' },
+    { name: 'Cliente 3' },
+    { name: 'Cliente 4' },
+    { name: 'Cliente 5' },
+    { name: 'Cliente 6' },
+    { name: 'Cliente 7' },
   ],
 }
+
+export const awardsContent = [
+  {
+    title: '5 Premios Eikon',
+    subtitle: 'Excelencia en Comunicación Institucional',
+    text: 'Galardonados en múltiples ediciones por el impacto, la creatividad y la estrategia aplicada a campañas corporativas.',
+  },
+  {
+    title: 'Premio Naves',
+    subtitle: 'Innovación y Modelo de Negocio',
+    text: 'Reconocidos por una de las competencias de emprendimientos y empresas más exigentes del país (Banco Macro e IAE Business School).',
+  },
+  {
+    title: 'Curadores Endeavor',
+    subtitle: 'Validación del Ecosistema Global',
+    text: 'Formamos parte de la red de apoyo al emprendimiento de alto impacto más grande del mundo, evaluando y guiando proyectos en Argentina.',
+  },
+]
+
+export const trainings = [
+  {
+    category: 'IA',
+    icon: '🤖',
+    title: 'Inteligencia Artificial Aplicada a los Negocios',
+    duration: '4 semanas',
+    mode: 'Online',
+  },
+  {
+    category: 'Data',
+    icon: '📊',
+    title: 'Data Analytics para la Toma de Decisiones',
+    duration: '6 semanas',
+    mode: 'Híbrido',
+  },
+  {
+    category: 'Diseño',
+    icon: '🎨',
+    title: 'Diseño de Contenido con Canva para Equipos Comerciales',
+    duration: '2 semanas',
+    mode: 'Online',
+  },
+  {
+    category: 'Marketing',
+    icon: '📈',
+    title: 'Estrategias de Growth Marketing Digital',
+    duration: '5 semanas',
+    mode: 'Online',
+  },
+  {
+    category: 'IA',
+    icon: '🤖',
+    title: 'Automatización de Procesos con IA para Pymes',
+    duration: '3 semanas',
+    mode: 'Híbrido',
+  },
+]
 
 export const metricsContent = {
   title: 'Resultados que hablan por sí solos',

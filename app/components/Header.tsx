@@ -44,6 +44,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="#"
+              className="px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:brightness-110"
+              style={{ backgroundColor: '#57b5e0', color: '#141f78' }}
+            >
+              Academia Neurona
+            </Link>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -87,9 +94,17 @@ export default function Header() {
               </Link>
             ))}
             <Link
+              href="#"
+              onClick={() => setMobileOpen(false)}
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full font-semibold text-sm"
+              style={{ backgroundColor: '#57b5e0', color: '#141f78' }}
+            >
+              Academia Neurona
+            </Link>
+            <Link
               href="#contacto"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center mt-2 px-5 py-2.5 rounded-full bg-[#57b5e0] text-white font-semibold text-sm"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white text-[#141f78] font-semibold text-sm"
             >
               Pedí tu reunión
             </Link>
