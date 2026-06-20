@@ -56,8 +56,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/55 pointer-events-none" />
 
       {/* Slide label strip */}
-      <div className="absolute top-28 left-0 right-0 flex justify-center z-10">
-        <div className="flex gap-6">
+      <div className="absolute top-12 sm:top-20 lg:top-28 left-0 right-0 flex justify-center z-10 px-4">
+        <div className="flex gap-3 sm:gap-6">
           {heroSlides.map((s, i) => (
             <button
               key={i}
@@ -83,7 +83,7 @@ export default function Hero() {
       </div>
 
       {/* Slide content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 sm:pt-20 lg:pt-24">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -92,12 +92,12 @@ export default function Hero() {
             exit={{ opacity: 0, y: -30, scale: 0.98 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
               {slide.title}
             </h1>
 
             <p
-              className="text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto"
+              className="text-sm sm:text-lg sm:text-xl leading-relaxed mb-6 sm:mb-10 max-w-2xl mx-auto"
               style={{ color: 'rgba(255,255,255,0.78)' }}
             >
               {slide.subtitle}
@@ -105,7 +105,7 @@ export default function Hero() {
 
             <Link
               href="#contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-semibold text-sm sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform"
               style={{ background: '#57b5e0' }}
             >
               {slide.cta}

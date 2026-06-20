@@ -55,13 +55,13 @@ export default function AcademiaPage() {
       <main className="pt-16 lg:pt-20" style={{ backgroundColor: '#0d1554' }}>
 
         {/* ── HERO ── */}
-        <section className="pt-20 pb-16 lg:pt-28 lg:pb-20">
+        <section className="pt-12 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 lg:pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="mb-5"
+              className="mb-4 sm:mb-5"
             >
               <span
                 className="inline-block rounded-full text-xs font-semibold tracking-widest uppercase px-4 py-1.5"
@@ -75,7 +75,7 @@ export default function AcademiaPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-5 leading-tight"
+              className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-5 leading-tight"
             >
               Academia{' '}
               <span style={{ color: '#57b5e0' }}>Neurona</span>
@@ -85,7 +85,7 @@ export default function AcademiaPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-              className="text-xl font-medium mb-6 italic"
+              className="text-base sm:text-xl font-medium mb-4 sm:mb-6 italic"
               style={{ color: '#57b5e0' }}
             >
               El escenario donde el conocimiento se transforma en acción.
@@ -95,7 +95,7 @@ export default function AcademiaPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.3 }}
-              className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed mb-4"
+              className="text-white/70 text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed mb-3 sm:mb-4"
             >
               Accedé a nuestro ecosistema de formación ejecutiva y profesional. Combinamos la
               rigurosidad técnica con la dinámica del lenguaje simple para ofrecerte experiencias
@@ -106,7 +106,7 @@ export default function AcademiaPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, ease: EASE, delay: 0.4 }}
-              className="text-white/45 text-base"
+              className="text-white/45 text-xs sm:text-base"
             >
               Explorá nuestra cartelera de formación digital y presencial.
             </motion.p>
@@ -114,7 +114,7 @@ export default function AcademiaPage() {
         </section>
 
         {/* ── TABS + CONTENIDO ── */}
-        <section className="pb-20 lg:pb-28">
+        <section className="pb-12 sm:pb-20 lg:pb-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Tab nav */}
@@ -123,7 +123,7 @@ export default function AcademiaPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="flex border-b mb-10 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+              className="flex border-b mb-6 sm:mb-10 overflow-x-auto [&::-webkit-scrollbar]:hidden"
               style={{ borderColor: 'rgba(255,255,255,0.12)', scrollbarWidth: 'none' }}
             >
               {[
@@ -133,7 +133,7 @@ export default function AcademiaPage() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative whitespace-nowrap px-5 py-4 font-semibold text-sm transition-colors duration-200 ${
+                  className={`relative whitespace-nowrap px-4 sm:px-5 py-3 sm:py-4 font-semibold text-xs sm:text-sm transition-colors duration-200 ${
                     activeTab === tab.id
                       ? 'text-white'
                       : 'text-white/45 hover:text-white/70'
@@ -161,7 +161,7 @@ export default function AcademiaPage() {
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.3, ease: EASE }}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {COURSES.map((course, i) => (
                       <motion.div
                         key={course.title}
@@ -169,7 +169,7 @@ export default function AcademiaPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.7, ease: EASE, delay: i * 0.1 }}
-                        whileHover={{ y: -6, boxShadow: '0 24px 48px rgba(0,0,0,0.45)' }}
+                        whileHover={{ y: -4, boxShadow: '0 24px 48px rgba(0,0,0,0.45)' }}
                         className="bg-white rounded-2xl overflow-hidden flex flex-col"
                         style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
                       >
@@ -181,14 +181,15 @@ export default function AcademiaPage() {
                           }}
                         >
                           <div
-                            className="w-14 h-14 rounded-full flex items-center justify-center"
+                            className="w-11 sm:w-14 h-11 sm:h-14 rounded-full flex items-center justify-center"
                             style={{
                               backgroundColor: 'rgba(255,255,255,0.15)',
                               border: '2px solid rgba(255,255,255,0.3)',
                             }}
                           >
                             <Play
-                              size={22}
+                              size={18}
+                              className="sm:w-[22px] sm:h-[22px]"
                               fill="white"
                               strokeWidth={0}
                               style={{ color: 'white', marginLeft: 3 }}
@@ -197,19 +198,19 @@ export default function AcademiaPage() {
                         </div>
 
                         {/* Content */}
-                        <div className="p-5 flex flex-col flex-1">
+                        <div className="p-4 sm:p-5 flex flex-col flex-1">
                           <h3
-                            className="font-bold text-base mb-2 leading-snug"
+                            className="font-bold text-sm sm:text-base mb-2 leading-snug"
                             style={{ color: '#141f78' }}
                           >
                             {course.title}
                           </h3>
-                          <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">
+                          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 flex-1">
                             {course.synopsis}
                           </p>
                           <button
                             onClick={() => window.alert('Próximamente')}
-                            className="w-full py-2.5 rounded-full text-white font-semibold text-sm transition-all duration-200 hover:brightness-110 cursor-pointer"
+                            className="w-full py-2 sm:py-2.5 rounded-full text-white font-semibold text-xs sm:text-sm transition-all duration-200 hover:brightness-110 cursor-pointer"
                             style={{
                               background: 'linear-gradient(135deg, #141f78 0%, #57b5e0 100%)',
                             }}
@@ -229,7 +230,7 @@ export default function AcademiaPage() {
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.3, ease: EASE }}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto">
                     {EVENTS.map((event, i) => (
                       <motion.div
                         key={event.title}
@@ -237,7 +238,7 @@ export default function AcademiaPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.7, ease: EASE, delay: i * 0.1 }}
-                        whileHover={{ y: -6, boxShadow: '0 24px 48px rgba(0,0,0,0.45)' }}
+                        whileHover={{ y: -4, boxShadow: '0 24px 48px rgba(0,0,0,0.45)' }}
                         className="bg-white rounded-2xl overflow-hidden flex flex-col"
                         style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
                       >
@@ -248,29 +249,29 @@ export default function AcademiaPage() {
                             background: 'linear-gradient(135deg, #0d1554 0%, #141f78 100%)',
                           }}
                         >
-                          <Calendar size={36} strokeWidth={1.5} style={{ color: '#57b5e0' }} />
+                          <Calendar size={32} className="sm:w-[36px] sm:h-[36px]" strokeWidth={1.5} style={{ color: '#57b5e0' }} />
                         </div>
 
                         {/* Content */}
-                        <div className="p-5 flex flex-col flex-1">
+                        <div className="p-4 sm:p-5 flex flex-col flex-1">
                           <span
-                            className="inline-block self-start px-3 py-1 rounded-full text-xs font-bold mb-3"
+                            className="inline-block self-start px-3 py-1 rounded-full text-xs font-bold mb-2 sm:mb-3"
                             style={{ backgroundColor: event.badgeBg, color: event.badgeText }}
                           >
                             {event.badge}
                           </span>
                           <h3
-                            className="font-bold text-base mb-2 leading-snug"
+                            className="font-bold text-sm sm:text-base mb-2 leading-snug"
                             style={{ color: '#141f78' }}
                           >
                             {event.title}
                           </h3>
-                          <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">
+                          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 flex-1">
                             {event.description}
                           </p>
                           <button
                             onClick={() => window.alert('Próximamente')}
-                            className="w-full py-2.5 rounded-full text-white font-semibold text-sm transition-all duration-200 hover:brightness-110 cursor-pointer"
+                            className="w-full py-2 sm:py-2.5 rounded-full text-white font-semibold text-xs sm:text-sm transition-all duration-200 hover:brightness-110 cursor-pointer"
                             style={{
                               background: 'linear-gradient(135deg, #141f78 0%, #57b5e0 100%)',
                             }}
@@ -289,38 +290,38 @@ export default function AcademiaPage() {
         </section>
 
         {/* ── ALIANZAS CO-PRODUCIDAS ── */}
-        <section className="pb-24 lg:pb-32">
+        <section className="pb-16 sm:pb-24 lg:pb-32">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="rounded-2xl p-10 lg:p-16 text-center"
+              className="rounded-2xl p-8 sm:p-10 lg:p-16 text-center"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.1)',
               }}
             >
               <span
-                className="inline-block rounded-full text-xs font-semibold tracking-widest uppercase px-4 py-1.5 mb-6"
+                className="inline-block rounded-full text-xs font-semibold tracking-widest uppercase px-4 py-1.5 mb-4 sm:mb-6"
                 style={{ background: 'rgba(87,181,224,0.15)', color: '#57b5e0' }}
               >
                 ALIANZAS CO-PRODUCIDAS
               </span>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 max-w-2xl mx-auto leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 max-w-2xl mx-auto leading-tight">
                 ¿Querés llevar la Academia Neurona a tu ciudad o institución?
               </h2>
 
-              <p className="text-white/65 text-lg max-w-xl mx-auto leading-relaxed mb-10">
+              <p className="text-white/65 text-sm sm:text-lg max-w-xl mx-auto leading-relaxed mb-6 sm:mb-10">
                 Co-producimos programas formativos a medida de las necesidades de tu región,
                 cámara empresarial o universidad, adaptando nuestros contenidos al contexto local.
               </p>
 
               <Link
                 href="/contacto"
-                className="inline-flex items-center px-10 py-4 rounded-full font-bold text-base transition-all duration-200 hover:brightness-110 hover:scale-105"
+                className="inline-flex items-center px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-200 hover:brightness-110 hover:scale-105"
                 style={{ backgroundColor: '#57b5e0', color: '#141f78' }}
               >
                 Co-producir una Capacitación

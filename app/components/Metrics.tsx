@@ -88,36 +88,36 @@ export default function Metrics() {
         </motion.div>
 
         {/* ── BENTO GRID ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:[grid-auto-rows:230px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:[grid-auto-rows:230px]">
 
           {/* C1: +13000 Comercios Activos — azul */}
           <motion.div
             {...fadeUp(0.05)}
-            className="rounded-2xl p-8 flex flex-col justify-end shadow-sm min-h-[200px] lg:col-start-1 lg:row-start-1"
+            className="rounded-2xl p-6 sm:p-8 flex flex-col justify-end shadow-sm min-h-[160px] sm:min-h-[200px] lg:col-start-1 lg:row-start-1"
             style={{ background: '#141f78' }}
           >
-            <p className="text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
+            <p className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
               <AnimatedCounter value={items[0].value} prefix={items[0].prefix} suffix={items[0].suffix} />
             </p>
-            <p className="text-white/70 font-medium text-sm tracking-wide uppercase">{items[0].label}</p>
+            <p className="text-white/70 font-medium text-xs sm:text-sm tracking-wide uppercase">{items[0].label}</p>
           </motion.div>
 
           {/* C2: +11200 Base de datos — celeste, más alta (2 filas) */}
           <motion.div
             {...fadeUp(0.1)}
-            className="rounded-2xl p-8 flex flex-col justify-end shadow-sm min-h-[200px] sm:row-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2"
+            className="rounded-2xl p-6 sm:p-8 flex flex-col justify-end shadow-sm min-h-[160px] sm:min-h-[200px] sm:row-span-2 lg:col-start-2 lg:row-start-1 lg:row-span-2"
             style={{ background: '#57b5e0' }}
           >
-            <p className="text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
+            <p className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
               <AnimatedCounter value={items[1].value} prefix={items[1].prefix} suffix={items[1].suffix} />
             </p>
-            <p className="text-white/80 font-medium text-sm tracking-wide uppercase">{items[1].label}</p>
+            <p className="text-white/80 font-medium text-xs sm:text-sm tracking-wide uppercase">{items[1].label}</p>
           </motion.div>
 
           {/* C3: Imagen placeholder 1 */}
           <motion.div
             {...fadeUp(0.15)}
-            className="rounded-2xl overflow-hidden min-h-[200px] lg:col-start-3 lg:row-start-1"
+            className="rounded-2xl overflow-hidden min-h-[160px] sm:min-h-[200px] lg:col-start-3 lg:row-start-1"
           >
             <ImagePlaceholder label="Imagen oficina / equipo" />
           </motion.div>
@@ -125,35 +125,35 @@ export default function Metrics() {
           {/* C4: 23% Aumento en ventas — blanco con borde celeste */}
           <motion.div
             {...fadeUp(0.15)}
-            className="rounded-2xl p-8 flex flex-col justify-end shadow-sm min-h-[200px] border-2 border-[#57b5e0] bg-white lg:col-start-1 lg:row-start-2"
+            className="rounded-2xl p-6 sm:p-8 flex flex-col justify-end shadow-sm min-h-[160px] sm:min-h-[200px] border-2 border-[#57b5e0] bg-white lg:col-start-1 lg:row-start-2"
           >
-            <p className="text-5xl lg:text-6xl font-extrabold text-[#141f78] leading-none mb-2">
+            <p className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#141f78] leading-none mb-2">
               <AnimatedCounter value={items[2].value} prefix={items[2].prefix} suffix={items[2].suffix} />
             </p>
-            <p className="text-gray-500 font-medium text-sm tracking-wide uppercase">{items[2].label}</p>
+            <p className="text-gray-500 font-medium text-xs sm:text-sm tracking-wide uppercase">{items[2].label}</p>
           </motion.div>
 
           {/* C5: +4500 Comercios capacitados — gradiente marca */}
           <motion.div
             {...fadeUp(0.2)}
-            className="rounded-2xl p-8 flex flex-col justify-end shadow-sm min-h-[200px] lg:col-start-3 lg:row-start-2"
+            className="rounded-2xl p-6 sm:p-8 flex flex-col justify-end shadow-sm min-h-[160px] sm:min-h-[200px] lg:col-start-3 lg:row-start-2"
             style={{ background: 'linear-gradient(135deg, #141f78 0%, #57b5e0 100%)' }}
           >
-            <p className="text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
+            <p className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-none mb-2">
               <AnimatedCounter value={items[3].value} prefix={items[3].prefix} suffix={items[3].suffix} />
             </p>
-            <p className="text-white/75 font-medium text-sm tracking-wide uppercase">{items[3].label}</p>
+            <p className="text-white/75 font-medium text-xs sm:text-sm tracking-wide uppercase">{items[3].label}</p>
           </motion.div>
 
           {/* C6: Redes sociales — 2 columnas, borde azul */}
           <motion.div
             {...fadeUp(0.25)}
-            className="rounded-2xl p-8 bg-white border-2 border-[#141f78] shadow-sm min-h-[200px] sm:col-span-2 lg:col-start-1 lg:col-span-2 lg:row-start-3"
+            className="rounded-2xl p-6 sm:p-8 bg-white border-2 border-[#141f78] shadow-sm min-h-[160px] sm:min-h-[200px] sm:col-span-2 lg:col-start-1 lg:col-span-2 lg:row-start-3"
           >
             <p className="text-xs font-bold tracking-[0.25em] uppercase text-[#141f78] mb-6">
               Seguinos en redes
             </p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-wrap gap-3 sm:gap-4 items-center">
               {socials.map((s) => (
                 <a
                   key={s.name}
@@ -161,10 +161,10 @@ export default function Metrics() {
                   aria-label={s.name}
                   className="group flex flex-col items-center gap-2"
                 >
-                  <span className="flex items-center justify-center w-14 h-14 rounded-xl border border-[#141f78]/15 text-[#141f78] transition-all duration-200 group-hover:bg-[#141f78] group-hover:text-white group-hover:border-[#141f78] group-hover:shadow-md">
+                  <span className="flex items-center justify-center w-12 sm:w-14 h-12 sm:h-14 rounded-xl border border-[#141f78]/15 text-[#141f78] transition-all duration-200 group-hover:bg-[#141f78] group-hover:text-white group-hover:border-[#141f78] group-hover:shadow-md">
                     {s.icon}
                   </span>
-                  <span className="text-[10px] font-semibold text-gray-400 group-hover:text-[#141f78] transition-colors tracking-wide uppercase">
+                  <span className="text-[9px] sm:text-[10px] font-semibold text-gray-400 group-hover:text-[#141f78] transition-colors tracking-wide uppercase">
                     {s.name}
                   </span>
                 </a>
@@ -175,7 +175,7 @@ export default function Metrics() {
           {/* C7: Imagen placeholder 2 */}
           <motion.div
             {...fadeUp(0.3)}
-            className="rounded-2xl overflow-hidden min-h-[200px] lg:col-start-3 lg:row-start-3"
+            className="rounded-2xl overflow-hidden min-h-[160px] sm:min-h-[200px] lg:col-start-3 lg:row-start-3"
           >
             <ImagePlaceholder label="Imagen proyecto / producto" />
           </motion.div>

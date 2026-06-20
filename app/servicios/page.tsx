@@ -105,7 +105,7 @@ export default function ServiciosPage() {
 
         {/* ── HERO ── */}
         <section
-          className="relative py-28 lg:py-44 flex items-center overflow-hidden"
+          className="relative py-16 sm:py-28 lg:py-44 flex items-center overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #141f78 0%, #1a2890 60%, #57b5e0 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -113,7 +113,7 @@ export default function ServiciosPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="mb-5"
+              className="mb-4 sm:mb-5"
             >
               <span className="inline-block rounded-full bg-white/15 text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5">
                 NUESTROS SERVICIOS
@@ -124,7 +124,7 @@ export default function ServiciosPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
+              className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto"
             >
               Diseño y Desarrollo de{' '}
               <span style={{ color: '#57b5e0' }}>Soluciones Empresariales</span>
@@ -134,7 +134,7 @@ export default function ServiciosPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="text-white/80 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-white/80 text-sm sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
             >
               Tres ejes integrados para transformar tu organización de manera completa: desde la
               estructura interna hasta la presencia digital y el rendimiento comercial.
@@ -152,7 +152,7 @@ export default function ServiciosPage() {
         </section>
 
         {/* ── ACORDEÓN ── */}
-        <section className="py-20 lg:py-28 bg-[#f9fafb]">
+        <section className="py-12 sm:py-20 lg:py-28 bg-[#f9fafb]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <motion.div {...PILL} className="text-center mb-4">
@@ -161,18 +161,18 @@ export default function ServiciosPage() {
               </span>
             </motion.div>
 
-            <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
+            <motion.div {...HEADING} className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
                 Tres ejes de trabajo integrados
               </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
                 Cada eje aborda una dimensión clave de tu empresa. Podés trabajar uno en particular
                 o los tres de forma coordinada según tu etapa de crecimiento.
               </p>
               <div className="mt-6 mx-auto h-1 w-16 rounded-full bg-[#57b5e0]" />
             </motion.div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {SERVICES.map((service, idx) => {
                 const isOpen = openIdx === idx
                 const { Icon } = service
@@ -190,26 +190,26 @@ export default function ServiciosPage() {
                     {/* Encabezado — siempre visible */}
                     <button
                       onClick={() => toggle(idx)}
-                      className="w-full text-left px-6 py-6 flex items-start gap-5 cursor-pointer"
+                      className="w-full text-left px-4 sm:px-6 py-4 sm:py-6 flex items-start gap-3 sm:gap-5 cursor-pointer"
                       aria-expanded={isOpen}
                     >
                       {/* Ícono en círculo */}
                       <div
-                        className="flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center mt-0.5"
+                        className="flex-shrink-0 w-10 sm:w-12 h-10 sm:h-12 rounded-full border-2 flex items-center justify-center mt-0.5"
                         style={{ borderColor: '#141f78' }}
                       >
-                        <Icon size={22} strokeWidth={1.8} style={{ color: '#141f78' }} />
+                        <Icon size={20} strokeWidth={1.8} style={{ color: '#141f78' }} className="sm:w-[22px] sm:h-[22px]" />
                       </div>
 
                       {/* Título + bajada */}
                       <div className="flex-1 min-w-0 text-left">
                         <h3
-                          className="text-lg sm:text-xl font-bold leading-snug"
+                          className="text-base sm:text-lg lg:text-xl font-bold leading-snug"
                           style={{ color: '#141f78' }}
                         >
                           {service.title}
                         </h3>
-                        <p className="text-sm italic text-gray-500 mt-1 leading-relaxed">
+                        <p className="text-xs sm:text-sm italic text-gray-500 mt-1 leading-relaxed">
                           {service.subtitle}
                         </p>
                       </div>
@@ -221,7 +221,7 @@ export default function ServiciosPage() {
                         className="flex-shrink-0 self-center ml-2"
                         style={{ color: '#57b5e0' }}
                       >
-                        <ChevronDown size={22} strokeWidth={2} />
+                        <ChevronDown size={20} strokeWidth={2} className="sm:w-[22px] sm:h-[22px]" />
                       </motion.div>
                     </button>
 
@@ -237,31 +237,31 @@ export default function ServiciosPage() {
                           style={{ overflow: 'hidden' }}
                         >
                           <div
-                            className="px-6 pb-8 pt-5 border-t"
+                            className="px-4 sm:px-6 pb-6 sm:pb-8 pt-3 sm:pt-5 border-t"
                             style={{ borderColor: 'rgba(87,181,224,0.25)' }}
                           >
                             {/* Texto de enfoque */}
-                            <p className="text-gray-600 leading-relaxed mb-6">
+                            <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                               {service.focus}
                             </p>
 
                             {/* Etiqueta "¿Qué resolvemos?" */}
                             <p
-                              className="text-xs font-bold tracking-widest uppercase mb-5"
+                              className="text-xs font-bold tracking-widest uppercase mb-4 sm:mb-5"
                               style={{ color: '#57b5e0' }}
                             >
                               ¿Qué resolvemos?
                             </p>
 
                             {/* Viñetas */}
-                            <ul className="space-y-5">
+                            <ul className="space-y-4 sm:space-y-5">
                               {service.items.map((item) => (
-                                <li key={item.title} className="flex gap-3">
+                                <li key={item.title} className="flex gap-2 sm:gap-3">
                                   <div
-                                    className="flex-shrink-0 w-2 h-2 rounded-full mt-[9px]"
+                                    className="flex-shrink-0 w-2 h-2 rounded-full mt-[7px] sm:mt-[9px]"
                                     style={{ backgroundColor: '#57b5e0' }}
                                   />
-                                  <p className="text-gray-600 leading-relaxed">
+                                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                                     <strong style={{ color: '#141f78' }}>{item.title}</strong>
                                     {': '}
                                     {item.text}

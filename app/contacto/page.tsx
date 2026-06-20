@@ -86,7 +86,7 @@ export default function ContactoPage() {
 
         {/* ── HERO ── */}
         <section
-          className="relative py-24 lg:py-36 flex items-center overflow-hidden"
+          className="relative py-16 sm:py-24 lg:py-36 flex items-center overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #141f78 0%, #1a2890 60%, #57b5e0 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -94,7 +94,7 @@ export default function ContactoPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="mb-5"
+              className="mb-4 sm:mb-5"
             >
               <span className="inline-block rounded-full bg-white/15 text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5">
                 CONTACTO
@@ -105,7 +105,7 @@ export default function ContactoPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
+              className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto"
             >
               ¿Listo para el siguiente{' '}
               <span style={{ color: '#57b5e0' }}>paso estratégico?</span>
@@ -115,7 +115,7 @@ export default function ContactoPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="text-white/80 text-lg max-w-3xl mx-auto leading-relaxed"
+              className="text-white/80 text-sm sm:text-lg max-w-3xl mx-auto leading-relaxed"
             >
               Un gran despliegue requiere de una planificación sólida. Ya sea que necesites
               ordenar tus procesos, blindar tu marca de forma legal, implementar soluciones de TI
@@ -129,9 +129,9 @@ export default function ContactoPage() {
         </section>
 
         {/* ── FORM + INFO ── */}
-        <section className="py-20 lg:py-28 bg-[#f9fafb]">
+        <section className="py-12 sm:py-20 lg:py-28 bg-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-start">
 
               {/* ── Formulario ── */}
               <motion.div
@@ -141,7 +141,7 @@ export default function ContactoPage() {
                 transition={{ duration: 0.9, ease: EASE }}
                 className="lg:col-span-7"
               >
-                <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
 
                   <AnimatePresence mode="wait">
                     {!submitted ? (
@@ -152,11 +152,11 @@ export default function ContactoPage() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <h2 className="text-xl font-bold mb-6" style={{ color: '#141f78' }}>
+                        <h2 className="text-lg sm:text-xl font-bold mb-5 sm:mb-6" style={{ color: '#141f78' }}>
                           Completá el formulario y agendá tu reunión
                         </h2>
 
-                        <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5" noValidate>
 
                           {/* Nombre */}
                           <div>
@@ -412,51 +412,51 @@ export default function ContactoPage() {
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
                 className="lg:col-span-5 lg:sticky lg:top-24"
               >
-                <div className="rounded-2xl p-8 text-white" style={{ background: '#141f78' }}>
+                <div className="rounded-2xl p-6 sm:p-8 text-white" style={{ background: '#141f78' }}>
 
-                  <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#57b5e0' }}>
+                  <p className="text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-3" style={{ color: '#57b5e0' }}>
                     PRESENCIA GLOBAL, IMPACTO FEDERAL
                   </p>
-                  <h2 className="text-2xl font-bold mb-3 text-white leading-snug">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white leading-snug">
                     Neurona Comercial en el mundo
                   </h2>
-                  <p className="text-white/70 text-sm leading-relaxed mb-8">
+                  <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">
                     Operamos bajo una estructura digital y federal que nos permite cruzar
                     fronteras y resolver desafíos corporativos complejos.
                   </p>
 
                   {/* Puntos de presencia */}
-                  <div className="space-y-6 mb-10">
-                    <div className="flex gap-4">
+                  <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
+                    <div className="flex gap-3 sm:gap-4">
                       <div
-                        className="flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center"
+                        className="flex-shrink-0 w-9 sm:w-10 h-9 sm:h-10 rounded-full border flex items-center justify-center"
                         style={{ borderColor: 'rgba(87,181,224,0.4)' }}
                       >
-                        <MapPin size={18} style={{ color: '#57b5e0' }} />
+                        <MapPin size={16} className="sm:w-[18px] sm:h-[18px]" style={{ color: '#57b5e0' }} />
                       </div>
                       <div>
-                        <p className="font-semibold text-white mb-1 text-sm">
+                        <p className="font-semibold text-white mb-1 text-xs sm:text-sm">
                           Hub Federal Argentina
                         </p>
-                        <p className="text-white/65 text-sm leading-relaxed">
+                        <p className="text-white/65 text-xs sm:text-sm leading-relaxed">
                           Coordinamos proyectos con profesionales distribuidos
                           estratégicamente en las principales provincias del país.
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex gap-3 sm:gap-4">
                       <div
-                        className="flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center"
+                        className="flex-shrink-0 w-9 sm:w-10 h-9 sm:h-10 rounded-full border flex items-center justify-center"
                         style={{ borderColor: 'rgba(87,181,224,0.4)' }}
                       >
-                        <Globe size={18} style={{ color: '#57b5e0' }} />
+                        <Globe size={16} className="sm:w-[18px] sm:h-[18px]" style={{ color: '#57b5e0' }} />
                       </div>
                       <div>
-                        <p className="font-semibold text-white mb-1 text-sm">
+                        <p className="font-semibold text-white mb-1 text-xs sm:text-sm">
                           Proyección Internacional
                         </p>
-                        <p className="text-white/65 text-sm leading-relaxed">
+                        <p className="text-white/65 text-xs sm:text-sm leading-relaxed">
                           Contamos con la experiencia administrativa, legal y comercial para
                           ejecutar proyectos, internacionalizar productos y gestionar marcas
                           fuera de Argentina, adaptándonos a las normativas de cada mercado.
@@ -467,36 +467,36 @@ export default function ContactoPage() {
 
                   {/* Contacto directo */}
                   <div
-                    className="border-t pt-8"
+                    className="border-t pt-6 sm:pt-8"
                     style={{ borderColor: 'rgba(87,181,224,0.2)' }}
                   >
                     <p
-                      className="text-xs font-semibold tracking-widest uppercase mb-5"
+                      className="text-xs font-semibold tracking-widest uppercase mb-4 sm:mb-5"
                       style={{ color: '#57b5e0' }}
                     >
                       ¿Preferís escribirnos directamente?
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                       <a
                         href="mailto:info@neuronacomercial.com"
-                        className="flex items-center gap-3 text-white/75 hover:text-white transition-colors duration-200 group"
+                        className="flex items-center gap-2 sm:gap-3 text-white/75 hover:text-white transition-colors duration-200 group text-xs sm:text-sm"
                       >
-                        <Mail size={16} style={{ color: '#57b5e0' }} />
-                        <span className="text-sm">info@neuronacomercial.com</span>
+                        <Mail size={14} className="sm:w-[16px] sm:h-[16px]" style={{ color: '#57b5e0' }} />
+                        <span>info@neuronacomercial.com</span>
                       </a>
 
                       <a
                         href="#"
-                        className="flex items-center gap-3 text-white/75 hover:text-white transition-colors duration-200"
+                        className="flex items-center gap-2 sm:gap-3 text-white/75 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
                       >
                         {/* LinkedIn icon inline — lucide-react no incluye este ícono en esta versión */}
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#57b5e0', flexShrink: 0 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#57b5e0', flexShrink: 0 }} className="sm:w-[16px] sm:h-[16px]">
                           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                           <rect x="2" y="9" width="4" height="12" />
                           <circle cx="4" cy="4" r="2" />
                         </svg>
-                        <span className="text-sm">LinkedIn de Neurona Comercial</span>
+                        <span>LinkedIn de Neurona Comercial</span>
                       </a>
                     </div>
                   </div>

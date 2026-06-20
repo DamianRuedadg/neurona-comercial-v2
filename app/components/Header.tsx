@@ -31,14 +31,14 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/Logo_Neurona.png"
               alt="Neurona Comercial"
               width={160}
               height={48}
-              className="h-24 lg:h-32 w-auto object-contain"
+              className="h-10 sm:h-14 lg:h-28 w-auto object-contain"
               priority
             />
           </Link>

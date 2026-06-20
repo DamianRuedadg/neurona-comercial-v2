@@ -101,8 +101,8 @@ function HistorySlider() {
 }
 
 const GALLERY_N        = 6
-const GALLERY_CARD_W   = 340
-const GALLERY_GAP      = 20
+const GALLERY_CARD_W   = 280
+const GALLERY_GAP      = 16
 const GALLERY_SCROLL   = GALLERY_N * (GALLERY_CARD_W + GALLERY_GAP)
 const GALLERY_DURATION = GALLERY_N * 5   // segundos — velocidad cómoda
 
@@ -110,7 +110,7 @@ const galleryLoopItems = Array.from({ length: GALLERY_N * 2 }, (_, i) => (i % GA
 
 const galleryCardVariants = {
   rest:  { scale: 1,    boxShadow: '0 0 0px 0px rgba(87,181,224,0)' },
-  hover: { scale: 1.08, boxShadow: '0 0 28px 6px rgba(87,181,224,0.55)' },
+  hover: { scale: 1.05, boxShadow: '0 0 28px 6px rgba(87,181,224,0.55)' },
 }
 
 const galleryShineVariants = {
@@ -192,7 +192,7 @@ export default function NosotrosPage() {
 
         {/* ── 1. HERO ── */}
         <section
-          className="relative py-28 lg:py-44 flex items-center overflow-hidden"
+          className="relative py-16 sm:py-24 lg:py-44 flex items-center overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #141f78 0%, #1a2890 60%, #57b5e0 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -200,7 +200,7 @@ export default function NosotrosPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="mb-5"
+              className="mb-4 sm:mb-5"
             >
               <span className="inline-block rounded-full bg-white/15 text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5">
                 SOBRE NOSOTROS
@@ -211,7 +211,7 @@ export default function NosotrosPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
+              className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight max-w-4xl mx-auto"
             >
               El Equipo Detrás de{' '}
               <span style={{ color: '#57b5e0' }}>Neurona Comercial</span>
@@ -221,7 +221,7 @@ export default function NosotrosPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-              className="text-white/80 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-white/80 text-sm sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed"
             >
               Somos una consultora integrada por profesionales interdisciplinarios que operan de
               forma remota desde distintos puntos de Argentina, aportando una visión federal y
@@ -241,7 +241,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* ── 2. NUESTRA HISTORIA ── */}
-        <section className="py-20 lg:py-28 bg-white">
+        <section className="py-12 sm:py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -249,29 +249,29 @@ export default function NosotrosPage() {
               </span>
             </motion.div>
 
-            <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: '#141f78' }}>
+            <motion.div {...HEADING} className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold" style={{ color: '#141f78' }}>
                 Nuestra Historia
               </h2>
               <div className="mt-4 mx-auto h-1 w-16 rounded-full bg-[#57b5e0]" />
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
               {/* Columna izquierda — texto */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">
                   En 2020, Juan Guzmán y Gerardo Márquez fundaron la empresa con el propósito de
                   transferir su experiencia corporativa en ingeniería industrial y derecho marcario al
                   tejido empresarial local. Ese espíritu colaborativo y orientado a resultados nos
                   impulsó a crecer de forma sostenida.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">
                   Hoy, Neurona Comercial es un equipo de aproximadamente veinte profesionales
                   especializados que combinan consultoría en procesos, TI, legales, administración y
                   growth marketing para resolver los desafíos estructurales y comerciales de las
