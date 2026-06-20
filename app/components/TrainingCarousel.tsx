@@ -51,16 +51,15 @@ export default function TrainingCarousel() {
     }
   }, [computeMaxIdx])
 
-  // Block wheel and touch-drag scrolling — arrows only
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
-    const stop = (e: Event) => e.preventDefault()
-    track.addEventListener('wheel', stop, { passive: false })
-    track.addEventListener('touchmove', stop, { passive: false })
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) e.preventDefault()
+    }
+    track.addEventListener('wheel', onWheel, { passive: false })
     return () => {
-      track.removeEventListener('wheel', stop)
-      track.removeEventListener('touchmove', stop)
+      track.removeEventListener('wheel', onWheel)
     }
   }, [])
 
