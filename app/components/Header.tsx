@@ -24,6 +24,15 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (!mobileOpen) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileOpen(false)
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [mobileOpen])
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -83,7 +92,9 @@ export default function Header() {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden text-white p-1"
-              aria-label="Abrir menú"
+              aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               {mobileOpen ? (
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -100,7 +111,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-[#141f78] border-t border-white/10">
+        <div id="mobile-menu" className="md:hidden bg-[#141f78] border-t border-white/10">
           <nav className="px-4 py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link

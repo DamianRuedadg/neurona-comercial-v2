@@ -10,6 +10,11 @@ export default function CustomCursor() {
   const targetPosition = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
+    const media = window.matchMedia('(min-width: 768px) and (pointer: fine) and (prefers-reduced-motion: no-preference)')
+    if (!media.matches) return
+
+    document.body.classList.add('has-custom-cursor')
+
     let animationFrame = 0
 
     const animate = () => {
@@ -42,6 +47,7 @@ export default function CustomCursor() {
     window.addEventListener('mouseup', handleUp)
 
     return () => {
+      document.body.classList.remove('has-custom-cursor')
       window.cancelAnimationFrame(animationFrame)
       window.removeEventListener('mousemove', handleMove)
       window.removeEventListener('mouseleave', handleLeave)

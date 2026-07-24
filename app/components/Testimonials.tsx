@@ -97,10 +97,20 @@ function FlipCard({ item, delay }: { item: Item; delay: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay }}
-      className="relative min-h-[420px]"
+      className="relative min-h-[420px] cursor-pointer"
       style={{ perspective: '1000px' }}
       onHoverStart={() => setFlipped(true)}
       onHoverEnd={() => setFlipped(false)}
+      onClick={() => setFlipped((f) => !f)}
+      role="button"
+      tabIndex={0}
+      aria-label={`Testimonio de ${item.name}, tocar para ver detalle`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          setFlipped((f) => !f)
+        }
+      }}
     >
       {/* Contenedor que gira — preserve-3d obligatorio */}
       <motion.div

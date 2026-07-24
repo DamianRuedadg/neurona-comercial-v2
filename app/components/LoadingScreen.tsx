@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
@@ -10,7 +10,17 @@ const FADE_MS = 500
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(true)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const alreadySeen = sessionStorage.getItem('neurona-intro-seen')
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (alreadySeen || reducedMotion) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync with browser-only APIs unavailable during SSR; must run on mount
+      setVisible(false)
+      return
+    }
+
+    sessionStorage.setItem('neurona-intro-seen', '1')
     document.body.style.overflow = 'hidden'
 
     const timer = setTimeout(() => setVisible(false), DURATION_MS)

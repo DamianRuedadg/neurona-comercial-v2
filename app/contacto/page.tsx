@@ -76,6 +76,26 @@ export default function ContactoPage() {
       setAreaError(true)
       return
     }
+
+    const lines = [
+      'Hola Neurona Comercial, quiero agendar un diagnóstico:',
+      `Nombre: ${name}`,
+      `Email: ${email}`,
+      `WhatsApp: ${countryCode} ${phone}`,
+      `Empresa: ${company}`,
+      country && `País: ${country}`,
+      province && `Provincia: ${province}`,
+      city && `Ciudad: ${city}`,
+      `Áreas de interés: ${areas.join(', ')}`,
+      message && `Mensaje: ${message}`,
+    ].filter(Boolean)
+
+    window.open(
+      `https://wa.me/5493885133069?text=${encodeURIComponent(lines.join('\n'))}`,
+      '_blank',
+      'noopener,noreferrer'
+    )
+
     setSubmitted(true)
   }
 
@@ -385,7 +405,7 @@ export default function ContactoPage() {
                         </p>
 
                         {/* Calendly embed placeholder */}
-                        <div className="rounded-2xl bg-gray-100 flex flex-col items-center justify-center py-24 px-8 min-h-[320px]">
+                        <div className="rounded-2xl bg-gray-100 flex flex-col items-center justify-center py-12 sm:py-24 px-4 sm:px-8 min-h-[240px] sm:min-h-[320px]">
                           <Calendar
                             size={52}
                             strokeWidth={1.2}
@@ -486,18 +506,6 @@ export default function ContactoPage() {
                         <span>info@neuronacomercial.com</span>
                       </a>
 
-                      <a
-                        href="#"
-                        className="flex items-center gap-2 sm:gap-3 text-white/75 hover:text-white transition-colors duration-200 text-xs sm:text-sm"
-                      >
-                        {/* LinkedIn icon inline — lucide-react no incluye este ícono en esta versión */}
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#57b5e0', flexShrink: 0 }} className="sm:w-[16px] sm:h-[16px]">
-                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                          <rect x="2" y="9" width="4" height="12" />
-                          <circle cx="4" cy="4" r="2" />
-                        </svg>
-                        <span>LinkedIn de Neurona Comercial</span>
-                      </a>
                     </div>
                   </div>
                 </div>

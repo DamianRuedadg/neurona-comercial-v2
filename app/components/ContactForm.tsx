@@ -35,6 +35,23 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    const lines = [
+      'Hola Neurona Comercial, quiero solicitar asesoría:',
+      `Nombre: ${form.nombre}`,
+      `Email: ${form.email}`,
+      form.empresa && `Empresa: ${form.empresa}`,
+      form.whatsapp && `WhatsApp: ${form.whatsapp}`,
+      form.areas.length > 0 && `Áreas de interés: ${form.areas.join(', ')}`,
+      form.mensaje && `Mensaje: ${form.mensaje}`,
+    ].filter(Boolean)
+
+    window.open(
+      `https://wa.me/5493885133069?text=${encodeURIComponent(lines.join('\n'))}`,
+      '_blank',
+      'noopener,noreferrer'
+    )
+
     setSubmitted(true)
   }
 
@@ -136,8 +153,7 @@ export default function ContactForm() {
                       required
                       value={form.nombre}
                       onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm transition-all"
-                      style={{ '--tw-ring-color': '#57b5e0' } as React.CSSProperties}
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#57b5e0]/40 focus:border-[#57b5e0] text-sm transition-all"
                       placeholder="Tu nombre completo"
                     />
                   </div>
@@ -150,7 +166,7 @@ export default function ContactForm() {
                       required
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#57b5e0]/40 focus:border-[#57b5e0] text-sm transition-all"
                       placeholder="email@empresa.com"
                     />
                   </div>
@@ -165,7 +181,7 @@ export default function ContactForm() {
                       type="text"
                       value={form.empresa}
                       onChange={(e) => setForm({ ...form, empresa: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#57b5e0]/40 focus:border-[#57b5e0] text-sm transition-all"
                       placeholder="Tu empresa"
                     />
                   </div>
@@ -177,7 +193,7 @@ export default function ContactForm() {
                       type="tel"
                       value={form.whatsapp}
                       onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#57b5e0]/40 focus:border-[#57b5e0] text-sm transition-all"
                       placeholder="+54 9 ..."
                     />
                   </div>
@@ -211,7 +227,7 @@ export default function ContactForm() {
                     rows={4}
                     value={form.mensaje}
                     onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 text-sm resize-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#57b5e0]/40 focus:border-[#57b5e0] text-sm resize-none transition-all"
                     placeholder="Contanos brevemente sobre tu empresa y qué necesitás..."
                   />
                 </div>

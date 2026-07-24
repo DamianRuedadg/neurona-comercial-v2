@@ -291,7 +291,7 @@ export default function ServiciosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="text-3xl lg:text-4xl font-bold text-white mb-4"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
             >
               ¿Listo para ordenar, digitalizar e impulsar tu organización?
             </motion.h2>

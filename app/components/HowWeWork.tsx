@@ -51,7 +51,7 @@ export default function HowWeWork() {
                   }}
                 >
                   <span
-                    className="text-8xl font-bold select-none"
+                    className="text-6xl sm:text-7xl lg:text-8xl font-bold select-none"
                     style={{ color: 'rgba(255,255,255,0.15)' }}
                   >
                     {index + 1}

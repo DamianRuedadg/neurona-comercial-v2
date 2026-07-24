@@ -127,7 +127,7 @@ export default function TrainingCarousel() {
             onClick={prev}
             disabled={current === 0}
             aria-label="Anterior"
-            className="flex-shrink-0 self-center w-11 h-11 rounded-full border-2 flex items-center justify-center bg-white transition-all duration-200 disabled:opacity-25 hover:bg-[#141f78] hover:text-white disabled:hover:bg-white disabled:hover:text-[#141f78]"
+            className="flex-shrink-0 self-center w-12 h-12 rounded-full border-2 flex items-center justify-center bg-white transition-all duration-200 disabled:opacity-25 hover:bg-[#141f78] hover:text-white disabled:hover:bg-white disabled:hover:text-[#141f78]"
             style={{ borderColor: '#141f78', color: '#141f78' }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -192,7 +192,7 @@ export default function TrainingCarousel() {
 
                   {/* CTA */}
                   <button
-                    className="w-full py-2.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 hover:bg-[#141f78] hover:text-white"
+                    className="w-full py-3.5 rounded-xl text-sm font-semibold border-2 transition-all duration-200 hover:bg-[#141f78] hover:text-white"
                     style={{ borderColor: '#141f78', color: '#141f78', backgroundColor: 'transparent' }}
                   >
                     Más información
@@ -207,7 +207,7 @@ export default function TrainingCarousel() {
             onClick={next}
             disabled={current >= maxIdx}
             aria-label="Siguiente"
-            className="flex-shrink-0 self-center w-11 h-11 rounded-full border-2 flex items-center justify-center bg-white transition-all duration-200 disabled:opacity-25 hover:bg-[#141f78] hover:text-white disabled:hover:bg-white disabled:hover:text-[#141f78]"
+            className="flex-shrink-0 self-center w-12 h-12 rounded-full border-2 flex items-center justify-center bg-white transition-all duration-200 disabled:opacity-25 hover:bg-[#141f78] hover:text-white disabled:hover:bg-white disabled:hover:text-[#141f78]"
             style={{ borderColor: '#141f78', color: '#141f78' }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -223,13 +223,17 @@ export default function TrainingCarousel() {
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Ir a la tarjeta ${i + 1}`}
-              className="h-2 rounded-full transition-all duration-300"
-              style={{
-                width: i === current ? 32 : 8,
-                backgroundColor: i === current ? '#141f78' : '#57b5e0',
-                opacity: i === current ? 1 : 0.35,
-              }}
-            />
+              className="flex items-center justify-center p-2 -m-2"
+            >
+              <span
+                className="h-2 rounded-full transition-all duration-300 block"
+                style={{
+                  width: i === current ? 32 : 8,
+                  backgroundColor: i === current ? '#141f78' : '#57b5e0',
+                  opacity: i === current ? 1 : 0.35,
+                }}
+              />
+            </button>
           ))}
         </div>
 

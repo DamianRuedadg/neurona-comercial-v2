@@ -293,7 +293,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* ── 3. FUNDADORES ── */}
-        <section className="py-20 lg:py-28 bg-[#f9fafb]">
+        <section className="py-12 sm:py-20 lg:py-28 bg-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -302,7 +302,7 @@ export default function NosotrosPage() {
             </motion.div>
 
             <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold" style={{ color: '#141f78' }}>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold" style={{ color: '#141f78' }}>
                 Quiénes nos fundaron
               </h2>
               <div className="mt-4 mx-auto h-1 w-16 rounded-full bg-[#57b5e0]" />
@@ -336,7 +336,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* ── 4. MAPA FEDERAL ── */}
-        <section className="py-20 lg:py-28 bg-white">
+        <section className="py-12 sm:py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -345,7 +345,7 @@ export default function NosotrosPage() {
             </motion.div>
 
             <motion.div {...HEADING} className="text-center mb-4">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
                 Presencia Federal
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
@@ -398,7 +398,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* ── 5. MISIÓN Y VISIÓN ── */}
-        <section className="py-20 lg:py-28 bg-[#f9fafb]">
+        <section className="py-12 sm:py-20 lg:py-28 bg-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -407,7 +407,7 @@ export default function NosotrosPage() {
             </motion.div>
 
             <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
                 Lo que nos guía
               </h2>
               <div className="mt-0 mx-auto h-1 w-16 rounded-full bg-[#57b5e0]" />
@@ -456,7 +456,7 @@ export default function NosotrosPage() {
         </div>
 
         {/* ── 7. GALERÍA DE EVENTOS ── */}
-        <section className="py-20 lg:py-28 bg-[#f9fafb]">
+        <section className="py-12 sm:py-20 lg:py-28 bg-[#f9fafb]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -465,7 +465,7 @@ export default function NosotrosPage() {
             </motion.div>
 
             <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
                 Galería de Eventos
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
@@ -485,7 +485,7 @@ export default function NosotrosPage() {
         </section>
 
         {/* ── 8. EQUIPO DE FACILITADORES ── */}
-        <section className="py-20 lg:py-28 bg-white">
+        <section className="py-12 sm:py-20 lg:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div {...PILL} className="text-center mb-4">
               <span className="inline-block rounded-full bg-[#57b5e0]/10 text-[#141f78] text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
@@ -494,7 +494,7 @@ export default function NosotrosPage() {
             </motion.div>
 
             <motion.div {...HEADING} className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#141f78' }}>
                 Nuestro Equipo de Facilitadores
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
@@ -540,7 +540,7 @@ export default function NosotrosPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="text-3xl lg:text-4xl font-bold text-white mb-4"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
             >
               ¿Listo para transformar tu organización?
             </motion.h2>

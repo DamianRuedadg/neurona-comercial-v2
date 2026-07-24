@@ -297,7 +297,7 @@ export default function AcademiaPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: EASE }}
-              className="rounded-2xl p-8 sm:p-10 lg:p-16 text-center"
+              className="rounded-2xl p-6 sm:p-10 lg:p-16 text-center"
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.1)',

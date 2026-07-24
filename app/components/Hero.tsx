@@ -19,6 +19,7 @@ export default function Hero() {
 
   useEffect(() => {
     if (paused) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const id = setInterval(next, AUTOPLAY_MS)
     return () => clearInterval(id)
   }, [next, paused])
@@ -31,6 +32,10 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) setPaused(false)
+      }}
     >
       {/* Animated background photo with Ken Burns zoom */}
       <AnimatePresence mode="sync">
@@ -97,7 +102,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="text-sm sm:text-lg sm:text-xl leading-relaxed mb-6 sm:mb-10 max-w-2xl mx-auto"
+              className="text-sm sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-10 max-w-2xl mx-auto"
               style={{ color: 'rgba(255,255,255,0.78)' }}
             >
               {slide.subtitle}
